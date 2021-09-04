@@ -7,12 +7,29 @@
     <link rel="stylesheet" href="/assets/css/count.css">
   </head>
   <body>
-    <h1><%= @number %></h1>
+    
+    <%  if @number==0 %>
+      <h1 class="nomal"><%= @number %></h1>
+    <%  elsif @number % 15==0 %>
+      <h1 class="fifteen"><%= @number %></h1>
+    <% elsif @number%5==0  %>
+      <h1 class="five"><%= @number %></h1>
+    <%  elsif @number%3==0 %>
+      <h1 class="three"><%= @number %></h1>
+    <%  else %>
+      <h1 class="nomal"><%= @number %></h1>
+    <% end %>
+    
+    
+    
     <form action="/plus" method="post">
       <input type="submit" value="+">
     </form>
     <form action="/minus" method="post">
       <input type="submit" value="-">
+    </form>
+    <form action="/clear" method="post">
+      <input type="submit" value="clear">
     </form>
   </body>
 </html>

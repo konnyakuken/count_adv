@@ -1,4 +1,5 @@
 *{
+    
     box-sizing: border-box;
 }
 body{
@@ -8,6 +9,9 @@ body{
     margin: auto;
     /* 全体の余白 */
     padding: 10px;
+    
+    /*全体の色を変更*/
+    background-color:#00b5de;
 }
 
 /* 数字 */
@@ -28,7 +32,9 @@ h1{
     line-height: 100px;
     
     /* 枠の太さ 線の種類 色 */
-    border: 1px solid #009688;
+    border: 1px solid #d8d8d8;
+    
+    color: #edda15;
     
     /* 枠を丸くする */
     border-radius: 50%;
@@ -55,14 +61,39 @@ input{
 input[value="+"]{
     
     /* 文字の色 */
-    color: #f9f9f9;
+    color: #d8d8d8;
     
     /* 背景 */
-    background: #448AFF;
+    background: #e94c4d;
 }
 
 /* マイナスボタン */
 input[value="-"]{
-    color: #f9f9f9;
-    background: #F44336;
+    color: #c2ca2e;
+    background: #c2ca2e;
+}
+
+/*clear*/
+input[value="clear"]{
+    color:#d8d8d8;
+    background:#f8b516;
+}
+
+
+.five{
+    color:#ec6c1f;
+    /* 枠の太さ 線の種類 色 */
+    border: 1px solid #d8d8d8;
+}
+
+.fifteen{
+    color:#2a6d39;
+    /* 枠の太さ 線の種類 色 */
+    border: 1px solid #f8b516;
+}
+
+.three{
+    color:#d01026;
+    /* 枠の太さ 線の種類 色 */
+    border: 1px solid #f8b516;
 }
