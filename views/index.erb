@@ -6,30 +6,37 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/count.css">
   </head>
+  
   <body>
+    <%Count.all.size.times do |n|%>
+      <%  if eval("@number#{n+1}")==0 %>
+        <h1 class="nomal"><%= eval("@number#{n+1}") %></h1>
+      <%  elsif eval("@number#{n+1}") % 15==0 %>
+        <h1 class="fifteen"><%= eval("@number#{n+1}") %></h1>
+      <% elsif eval("@number#{n+1}")%5==0  %>
+        <h1 class="five"><%= eval("@number#{n+1}") %></h1>
+      <%  elsif eval("@number#{n+1}")%3==0 %>
+        <h1 class="three"><%= eval("@number#{n+1}") %></h1>
+      <%  else %>
+        <h1 class="nomal"><%= eval("@number#{n+1}") %></h1>
+      <% end %>
     
-    <%  if @number==0 %>
-      <h1 class="nomal"><%= @number %></h1>
-    <%  elsif @number % 15==0 %>
-      <h1 class="fifteen"><%= @number %></h1>
-    <% elsif @number%5==0  %>
-      <h1 class="five"><%= @number %></h1>
-    <%  elsif @number%3==0 %>
-      <h1 class="three"><%= @number %></h1>
-    <%  else %>
-      <h1 class="nomal"><%= @number %></h1>
-    <% end %>
-    
-    
-    
-    <form action="/plus" method="post">
+    <form action="/plus/<%=n+1%>" method="post">
       <input type="submit" value="+">
     </form>
-    <form action="/minus" method="post">
+    <form action="/minus/<%=n+1%>" method="post">
       <input type="submit" value="-">
     </form>
-    <form action="/clear" method="post">
+    <form action="/clear/<%=n+1%>" method="post">
       <input type="submit" value="clear">
     </form>
+        <%  end %>
+    
+      <form action="/new" method="post" >
+        <input type="submit" value="カウンター作成">
+      </form>
+
+    
+
   </body>
 </html>

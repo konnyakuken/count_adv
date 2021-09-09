@@ -65,12 +65,13 @@ input[value="+"]{
     
     /* 背景 */
     background: #e94c4d;
+    
 }
 
 /* マイナスボタン */
 input[value="-"]{
-    color: #c2ca2e;
-    background: #c2ca2e;
+    color: #d8d8d8;
+    background:#c2ca2e;
 }
 
 /*clear*/
@@ -79,6 +80,10 @@ input[value="clear"]{
     background:#f8b516;
 }
 
+input[value="カウンター作成"]{
+    color: #d8d8d8;
+    background: #d01026;
+}
 
 .five{
     color:#ec6c1f;
@@ -97,3 +102,4 @@ input[value="clear"]{
     /* 枠の太さ 線の種類 色 */
     border: 1px solid #f8b516;
 }
+
